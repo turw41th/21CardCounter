@@ -16,7 +16,7 @@ i = 1
 
 
 while decksremaining > 0:
-    while i <= 52:
+    while i < 52:
         card = input("Enter card > ").lower()
 
         """
@@ -44,7 +44,8 @@ while decksremaining > 0:
         truecount = runningcount / decksremaining
 
         print("running count: " + str(runningcount))
-        print("Your truecount is " + str(round(truecount)) + "\n")
+        print("Your truecount: " + str(round(truecount)) + "\n")
+        print("Decks remaining: " + str(decksremaining) + "\n")
 
         i = i + 1
 
