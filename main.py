@@ -1,4 +1,5 @@
 print("Welcome to the the card counter, a console based companion for your blackjack game")
+print("Just run it next to your game of blackjack and enter the cards drawn into the software. Use the numbers or letters shown on the cards.")
 
 """
 deck1 = ["a", "2", "3", "4", "5", "6", "7", "8", "9", "j", "q", "k"]
@@ -40,6 +41,9 @@ while decksremaining > 0:
             runningcount = runningcount
         elif card == "10" or card == "j" or card == "q" or card == "k" or card == "a":
             runningcount -= 1
+        else:
+            print("Please enter a valid card. You can use numbers from 2 - 10 and J, Q, K and A!")
+            continue
 
         truecount = runningcount / decksremaining
 
