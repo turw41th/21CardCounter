@@ -1,3 +1,5 @@
+import sys
+
 print("Welcome to the the card counter, a console based companion for your blackjack game")
 print("Just run it next to your game of blackjack and enter the cards drawn into the software. Use the numbers or letters shown on the cards.")
 
@@ -18,7 +20,7 @@ i = 1
 
 while decksremaining > 0:
     while i < 52:
-        card = input("Enter card > ").lower()
+        card = input(">>>>Enter card > ").lower()
 
         """
         if card in deck1:
@@ -35,6 +37,9 @@ while decksremaining > 0:
             deck6.remove(card)
         """
 
+        if card == "exit" or card == "quit":
+            sys.exit()
+
         if card == "2" or card == "3" or card == "4" or card == "5" or card == "6":
             runningcount += 1
         elif card == "7" or card == "8" or card == "9":
@@ -48,15 +53,10 @@ while decksremaining > 0:
         truecount = runningcount / decksremaining
 
         print("running count: " + str(runningcount))
-        print("Your truecount: " + str(round(truecount)) + "\n")
-        print("Decks remaining: " + str(decksremaining) + "\n")
+        print(f"Your truecount: {str(round(truecount))}\n")
+        print(f"Decks remaining: {str(decksremaining)}\n")
 
         i = i + 1
 
     decksremaining -= 1
     i = 1
-
-
-
-
-
