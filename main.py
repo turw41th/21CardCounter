@@ -1,7 +1,9 @@
 import sys
 
 print("Welcome to the the card counter, a console based companion for your blackjack game")
-print("Just run it next to your game of blackjack and enter the cards drawn into the software. Use the numbers or letters shown on the cards.")
+print("Just run it next to your game of blackjack and enter the cards drawn into the software. Use the numbers or letters shown on the cards.\n")
+
+decksremaining = int(input("How many Decks? > "))
 
 """
 deck1 = ["a", "2", "3", "4", "5", "6", "7", "8", "9", "j", "q", "k"]
@@ -13,14 +15,14 @@ deck6 = ["a", "2", "3", "4", "5", "6", "7", "8", "9", "j", "q", "k"]
 """
 
 runningcount = 0
-decksremaining = 8
+#decksremaining = 8
 
 i = 1
 
 
 while decksremaining > 0:
     while i < 52:
-        card = input(">>>>Enter card > ").lower()
+        card = input(">> Enter card > ").lower()
 
         """
         if card in deck1:
